@@ -175,6 +175,7 @@ export interface WeathermapSettings {
       font: string;
     };
     showAllWithPercentage: boolean;
+    displayPercentageDecimalPlaces: number;
     defaultUnits?: string;
   };
   fontSizing: {

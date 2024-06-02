@@ -205,6 +205,23 @@ export const PanelForm = ({ value, onChange }: Props) => {
             }}
           />
         </InlineField>
+        {value.settings.link.showAllWithPercentage ? (
+          <InlineField grow label={'Display Percentage Decimal Places'}>
+            <Slider
+              min={0}
+              max={2}
+              value={value.settings.link.displayPercentageDecimalPlaces}
+              step={1}
+              onChange={(num) => {
+                let options = value;
+                options.settings.link.displayPercentageDecimalPlaces = num;
+                onChange(options);
+              }}
+            />
+          </InlineField>
+        ) : (
+          ''
+        )}
         <InlineField grow label={'Default Link Units'}>
           <UnitPicker
             onChange={(val) => {

@@ -307,7 +307,9 @@ export const WeathermapPanel: React.FC<PanelProps<SimpleOptions>> = (props: Pane
           // Note that this does allow the text to be 0% even when a query doesn't return a value.
           toReturn.sides[side].currentPercentageText =
             toReturn.sides[side].bandwidth > 0
-              ? `${((toReturn.sides[side].currentValue / toReturn.sides[side].bandwidth) * 100).toFixed(2)}%`
+              ? `${((toReturn.sides[side].currentValue / toReturn.sides[side].bandwidth) * 100).toFixed(
+                wm.settings.link.displayPercentageDecimalPlaces
+              )}%`
               : 'n/a%';
         }
       }

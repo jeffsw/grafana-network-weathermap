@@ -45,6 +45,7 @@ export const WeathermapBuilder = (props: Props) => {
           font: theme.colors.secondary.contrastText,
         },
         showAllWithPercentage: false,
+        displayPercentageDecimalPlaces: 2,
       },
       fontSizing: {
         node: 10,
